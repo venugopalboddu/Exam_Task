@@ -1,0 +1,22 @@
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+th,td{
+    padding: 10px;
+}
+tr.head{
+    color: brown; 
+}
+h2, h3{
+    text-align: center;
+    color: brown;
+}
+h4{
+    text-align: center; 
+}
+.center{
+    text-align: center;
+}

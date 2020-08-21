@@ -1,0 +1,47 @@
+<h2>Get Data from Server</h2>
+<hr/><br/>
+<div class="center">
+<input type="text" [(ngModel)]="msg" placeholder="Enter userId only"/>&nbsp;
+<button class="btn btn-success" (click)="ID(msg)">Get details of UserId</button>
+</div><br/><br/>
+
+<div *ngIf="Table1">
+  <h3>All Posts Data</h3>
+  <table>
+    <tr class="head">
+      <th>Id</th>
+      <th>UserId</th>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+      <tr *ngFor="let d of data">
+      <td>{{d?.id}}</td>
+      <td>{{d?.userId}}</td>
+      <td>{{d?.title}}</td>
+      <td>{{d?.body}}</td>
+    </tr>
+  </table>
+</div>
+
+<div *ngIf="err">
+  <h4 style="color: red;">UserId is required</h4>
+</div>
+<div *ngIf="err1">
+  <h4 style="color: red;">Please enter valid UserId</h4>
+</div>
+<div *ngIf="Table2">
+  <h3>Displaying the selected userId Details</h3> 
+<table>
+  <tr class="head">
+    <th>UserId</th>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+
+    <tr *ngFor="let uid of idData">
+    <td>{{uid?.userId}}</td>
+    <td>{{uid?.title}}</td>
+    <td>{{uid?.body}}</td>
+  </tr>
+</table>
+</div>
